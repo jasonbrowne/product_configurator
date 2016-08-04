@@ -1,7 +1,7 @@
 frappe.ui.form.on("Quotation Item", {
 	"configure": function(frm, doctype, docname) {
 		var item = frappe.get_doc(doctype, docname);
-		frm.fields_dict.items.grid.open_grid_row.hide_form();
+		frappe.ui.form.get_open_grid_form().hide_form();
 		product_configurator.get_configuration_template(frm, item);
 	},
 	
